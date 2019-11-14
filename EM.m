@@ -1,7 +1,7 @@
 function [ class ] = mycluster( T, K )
      
 %
-% My goal of this Project is implementing your own text clustering algo.
+% My goal of this Project is implementing clustering algo.
 %
 % Input:
 %     bow: data set. Bag of words representation of text document as
@@ -12,9 +12,6 @@ function [ class ] = mycluster( T, K )
 % Output:
 %     class: the assignment of each topic. The
 %     assignment should be 1, 2, 3, etc. 
-%
-
-
 % Initialization over parameters of distribution
 %expectation__Di_to_c=[]
         % Initialize clusters (K clusters in total)
@@ -66,9 +63,7 @@ function [ class ] = mycluster( T, K )
    end
    
   end
-        
-  
-        %Expectation
+  %Expectation
         %Compute the expectation of document Di belonging to cluster c:
         %ExpectMatrix_p=ExpectationCompute(T,K,clusters,pi_c);
         %ExpectMatrix=ExpectMatrix_p;
@@ -106,8 +101,4 @@ function [ class ] = mycluster( T, K )
         %Update the mixture parameters; pi_c
         pi_c_p=mean(ExpectMatrix);
     end
-    
-        
-
-
 end
